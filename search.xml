@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[HEXO爬坑]]></title>
+    <url>%2F2019%2F03%2F21%2FMy-first-Blog%2F</url>
+    <content type="text"><![CDATA[&nbsp; Hexo爬坑路（一）在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。 ①修改配置在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！ 1234deploy: type: git repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.io.git branch: master ②将hexo博客部署到github失败输入hexo deploy命令时报错： 123you should configure deployment settings in _config.yml first！Availale deployer plugins:git 这个错误是因为你在配置_config.yml文件的deploy时错误（忘记加空格，地址或type写错等错误） 删除githubpages之前创建的网页 删除你一开始创建的整个blog文件和github上的库，从头开始仔细操作，确保每一步都不出错！ ③node npm hexo命令失效在我把博客部署到github上后，准备写我的第一篇博客，在bash输入hexo new “文章名称”时候，发现node npm hexo命令全部失效。报错：1/c/user/用户名/AppData/Roaming/npm/hexo:line 12:node:command not found 原因：node环境变量配置问题 重新配置环境添加NODE_PATH,路径为C:Program Filesnodejsnode_modules在Path中添加一行C:Program Filesnodejs 找到C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo\bin\，将此目录添加到环境变量中 重装nodejs（最实用方法！别犹豫!）在重装时，next到custom setup时选择Add to PATH选项！这样就会帮你自动配置好路径，然后在bash里面输出：node -v查看版本！问题解决！]]></content>
+      <categories>
+        <category>Hexo教程</category>
+      </categories>
+      <tags>
+        <tag>-hexo</tag>
+      </tags>
+  </entry>
+</search>
