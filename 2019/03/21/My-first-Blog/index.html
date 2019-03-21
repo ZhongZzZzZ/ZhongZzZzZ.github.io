@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Zhong">
 <meta property="og:description" content="Hexo爬坑路（一）在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。 ①修改配置在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！ 1234deploy:  type: git  repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T17:36:49.482Z">
+<meta property="og:updated_time" content="2019-03-21T17:47:05.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My first Blog">
 <meta name="twitter:description" content="Hexo爬坑路（一）在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。 ①修改配置在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！ 1234deploy:  type: git  repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.i">
@@ -376,16 +376,16 @@
       
         <a id="more"></a>
 <h1 id="Hexo爬坑路（一）"><a href="#Hexo爬坑路（一）" class="headerlink" title="Hexo爬坑路（一）"></a>Hexo爬坑路（一）</h1><p>在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。</p>
-<h6 id="①修改配置"><a href="#①修改配置" class="headerlink" title="①修改配置"></a>①修改配置</h6><p>在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！</p>
+<h3 id="①修改配置"><a href="#①修改配置" class="headerlink" title="①修改配置"></a>①修改配置</h3><p>在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h6 id="②将hexo博客部署到github失败"><a href="#②将hexo博客部署到github失败" class="headerlink" title="②将hexo博客部署到github失败"></a>②将hexo博客部署到github失败</h6><p>输入hexo deploy命令时报错：</p>
+<h3 id="②将hexo博客部署到github失败"><a href="#②将hexo博客部署到github失败" class="headerlink" title="②将hexo博客部署到github失败"></a>②将hexo博客部署到github失败</h3><p>输入hexo deploy命令时报错：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">you should configure deployment settings in _config.yml first！</span><br><span class="line">Availale deployer plugins:</span><br><span class="line">git</span><br></pre></td></tr></table></figure>
 <p>这个错误是因为你在配置_config.yml文件的deploy时错误（忘记加空格，地址或type写错等错误）</p>
 <ol>
 <li>删除githubpages之前创建的网页</li>
 <li>删除你一开始创建的整个blog文件和github上的库，从头开始仔细操作，确保每一步都不出错！</li>
 </ol>
-<h6 id="③node-npm-hexo命令失效"><a href="#③node-npm-hexo命令失效" class="headerlink" title="③node npm hexo命令失效"></a>③node npm hexo命令失效</h6><p>在我把博客部署到github上后，准备写我的第一篇博客，在bash输入hexo new “文章名称”时候，发现node npm hexo命令全部失效。<br>报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/c/user/用户名/AppData/Roaming/npm/hexo:line 12:node:command not found</span><br></pre></td></tr></table></figure></p>
+<h3 id="③node-npm-hexo命令失效"><a href="#③node-npm-hexo命令失效" class="headerlink" title="③node npm hexo命令失效"></a>③node npm hexo命令失效</h3><p>在我把博客部署到github上后，准备写我的第一篇博客，在bash输入hexo new “文章名称”时候，发现node npm hexo命令全部失效。<br>报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/c/user/用户名/AppData/Roaming/npm/hexo:line 12:node:command not found</span><br></pre></td></tr></table></figure></p>
 <p>原因：node环境变量配置问题</p>
 <ol>
 <li>重新配置环境<br>添加NODE_PATH,路径为C:Program Filesnodejsnode_modules在Path中添加一行C:Program Filesnodejs</li>
@@ -573,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo爬坑路（一）"><span class="nav-number">1.</span> <span class="nav-text">Hexo爬坑路（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#①修改配置"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">①修改配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#②将hexo博客部署到github失败"><span class="nav-number">1.0.0.0.0.2.</span> <span class="nav-text">②将hexo博客部署到github失败</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#③node-npm-hexo命令失效"><span class="nav-number">1.0.0.0.0.3.</span> <span class="nav-text">③node npm hexo命令失效</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo爬坑路（一）"><span class="nav-number">1.</span> <span class="nav-text">Hexo爬坑路（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#①修改配置"><span class="nav-number">1.0.1.</span> <span class="nav-text">①修改配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#②将hexo博客部署到github失败"><span class="nav-number">1.0.2.</span> <span class="nav-text">②将hexo博客部署到github失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#③node-npm-hexo命令失效"><span class="nav-number">1.0.3.</span> <span class="nav-text">③node npm hexo命令失效</span></a></li></ol></li></ol></div>
             
 
           </div>
