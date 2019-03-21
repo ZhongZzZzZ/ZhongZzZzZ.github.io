@@ -376,30 +376,17 @@
 
       
         
-          
-            <a id="more"></a>
-<h1 id="Hexo爬坑路（一）"><a href="#Hexo爬坑路（一）" class="headerlink" title="Hexo爬坑路（一）"></a>Hexo爬坑路（一）</h1><p>在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。</p>
-<h3 id="①修改配置"><a href="#①修改配置" class="headerlink" title="①修改配置"></a>①修改配置</h3><p>在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h3 id="②将hexo博客部署到github失败"><a href="#②将hexo博客部署到github失败" class="headerlink" title="②将hexo博客部署到github失败"></a>②将hexo博客部署到github失败</h3><p>输入hexo deploy命令时报错：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">you should configure deployment settings in _config.yml first！</span><br><span class="line">Availale deployer plugins:</span><br><span class="line">git</span><br></pre></td></tr></table></figure>
-<p>这个错误是因为你在配置_config.yml文件的deploy时错误（忘记加空格，地址或type写错等错误）</p>
-<ol>
-<li>删除githubpages之前创建的网页</li>
-<li>删除你一开始创建的整个blog文件和github上的库，从头开始仔细操作，确保每一步都不出错！</li>
-</ol>
-<h3 id="③node-npm-hexo命令失效"><a href="#③node-npm-hexo命令失效" class="headerlink" title="③node npm hexo命令失效"></a>③node npm hexo命令失效</h3><p>在我把博客部署到github上后，准备写我的第一篇博客，在bash输入hexo new “文章名称”时候，发现node npm hexo命令全部失效。<br>报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/c/user/用户名/AppData/Roaming/npm/hexo:line 12:node:command not found</span><br></pre></td></tr></table></figure></p>
-<p>原因：node环境变量配置问题</p>
-<ol>
-<li>重新配置环境<br>添加NODE_PATH,路径为C:Program Filesnodejsnode_modules在Path中添加一行C:Program Filesnodejs</li>
-<li>找到C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo\bin\，将此目录添加到环境变量中</li>
-<li>重装nodejs（最实用方法！别犹豫!）<br>在重装时，next到custom setup时选择Add to PATH选项！这样就会帮你自动配置好路径，然后在bash里面输出：node -v查看版本！问题解决！</li>
-</ol>
-
-          
+          <p>&nbsp;<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/21/My-first-Blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
