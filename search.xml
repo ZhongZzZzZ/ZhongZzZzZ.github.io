@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[域链、闭包、立即执行函数-知识点]]></title>
+    <url>%2F2019%2F03%2F23%2F%E9%97%AD%E5%8C%85%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[&nbsp; 函数作用域、链 作用域：[[scope]] 属性就是作用域，不能被访问，其中存储了运行期上下午集合。 作用域链：[[scope]]域的集合呈链式链接，称为作用域链 12345678910function a()&#123; function b()&#123; function c()&#123; &#125; c(); &#125; b();&#125;a(); a 定义时作用域链：a.[[scope] –&gt; 0:global objecta 执行时作用域链：a.[[scope] –&gt; 0:activation object 1:global objectb 定义时作用域链：b.[[scope] –&gt; 0:global object 1:global objectb 执行时作用域链：b.[[scope] –&gt; 0:activation object(b的AO) 1:activation object 2:globalobject 闭包形式123456789function a()&#123; function b()&#123; document.write(aaa); &#125; var aaa=123; return b;&#125;var demo = a();demo();//输出结果为123 把b函数return出去，b函数在函数a里面并未执行，并且b在外部保存了a函数的activation object 域，因此可以访问到变量aaa。 注意点当函数内部被保存到外部，即生成闭包，闭包会导致原有的作用域链不释放，造成内存泄漏（如上例，b保存了a的作用域到外部，不释放，占用内存空间，造成内存泄漏） 闭包作用 实现公有变量，如：函数累加器，使开发更加模块化 123456789101112function a()&#123; var count = 0; function demo()&#123; count ++; console.log(count); &#125; return demo;&#125;var counter = a();counter();//1counter();//2counter();//3 可以做缓存 可以实现封装，属性私有化 模块化开发，防止全局污染 立即执行函数立即执行函数执行完立刻被销毁，不会占用内存空间。有如下形式 (function() { } ( ) ) //w3c官方文档建议用法 (function( ) { } ) ( )]]></content>
+      <tags>
+        <tag>-闭包 -作用域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HEXO爬坑]]></title>
     <url>%2F2019%2F03%2F21%2FMy-first-Blog%2F</url>
     <content type="text"><![CDATA[&nbsp; Hexo爬坑路（一）在创建我的第一个博客时遇到了很多困难，分享一下我遇到的困哪和解决方法。 ①修改配置在把博客托管到到github时修改_config.yml里的deploy配置时，每个冒号后面一定要加一个半角空格！！记住！！半角空格！！ 1234deploy: type: git repo: https://github.com/ZhongZzZzZ/ZhongZzZzZ.github.io.git branch: master ②将hexo博客部署到github失败输入hexo deploy命令时报错： 123you should configure deployment settings in _config.yml first！Availale deployer plugins:git 这个错误是因为你在配置_config.yml文件的deploy时错误（忘记加空格，地址或type写错等错误） 删除githubpages之前创建的网页 删除你一开始创建的整个blog文件和github上的库，从头开始仔细操作，确保每一步都不出错！ ③node npm hexo命令失效在我把博客部署到github上后，准备写我的第一篇博客，在bash输入hexo new “文章名称”时候，发现node npm hexo命令全部失效。报错：1/c/user/用户名/AppData/Roaming/npm/hexo:line 12:node:command not found 原因：node环境变量配置问题 重新配置环境添加NODE_PATH,路径为C:Program Filesnodejsnode_modules在Path中添加一行C:Program Filesnodejs 找到C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo\bin\，将此目录添加到环境变量中 重装nodejs（最实用方法！别犹豫!）在重装时，next到custom setup时选择Add to PATH选项！这样就会帮你自动配置好路径，然后在bash里面输出：node -v查看版本！问题解决！]]></content>
