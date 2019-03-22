@@ -354,37 +354,17 @@
 
       
         
-          
-            <a id="more"></a>
-<p>&nbsp;  </p>
-<h1 id="函数作用域、链"><a href="#函数作用域、链" class="headerlink" title="函数作用域、链"></a>函数作用域、链</h1><ol>
-<li>作用域：[[scope]] 属性就是作用域，不能被访问，其中存储了运行期上下午集合。</li>
-<li>作用域链：[[scope]]域的集合呈链式链接，称为作用域链</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">    function b()&#123;</span><br><span class="line">        function c()&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">      c();</span><br><span class="line">    &#125;</span><br><span class="line">    b();</span><br><span class="line">&#125;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
-<p>a 定义时作用域链：a.[[scope] –&gt; 0:global object<br><br>a 执行时作用域链：a.[[scope] –&gt; 0:activation object<br><br>　　　　　　　　　　　　　　　　 1:global object<br><br>b 定义时作用域链：b.[[scope] –&gt; 0:global object<br><br>　　　　　　　　　　　　　　　 　1:global object<br><br>b 执行时作用域链：b.[[scope] –&gt; 0:activation object<br>(b的AO)<br><br>　　　　　　　　　　　　    　　            　1:activation object<br>　　　　　　　                  　　　　　　　　        2:globalobject<br>　　　　　　　　　　　　　　　 　　</p>
-<h1 id="闭包形式"><a href="#闭包形式" class="headerlink" title="闭包形式"></a>闭包形式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">    function b()&#123;</span><br><span class="line">        document.write(aaa);</span><br><span class="line">    &#125;</span><br><span class="line">    var aaa=123;</span><br><span class="line">    return b;</span><br><span class="line">&#125;</span><br><span class="line">var demo = a();</span><br><span class="line">demo();//输出结果为123</span><br></pre></td></tr></table></figure>
-<p>把b函数return出去，b函数在函数a里面并未执行，并且b在外部保存了a函数的activation object 域，因此可以访问到变量aaa。</p>
-<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><p>当函数内部被保存到外部，即生成闭包，闭包会导致原有的作用域链不释放，造成内存泄漏（如上例，b保存了a的作用域到外部，不释放，占用内存空间，造成内存泄漏）</p>
-<h3 id="闭包作用"><a href="#闭包作用" class="headerlink" title="闭包作用"></a>闭包作用</h3><ol>
-<li><p>实现公有变量，如：函数累加器，使开发更加模块化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">    var count = 0;</span><br><span class="line">    function demo()&#123;</span><br><span class="line">        count ++;</span><br><span class="line">        console.log(count);</span><br><span class="line">    &#125;</span><br><span class="line">    return demo;</span><br><span class="line">&#125;</span><br><span class="line">var counter = a();</span><br><span class="line">counter();//1</span><br><span class="line">counter();//2</span><br><span class="line">counter();//3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以做缓存 </p>
-</li>
-<li>可以实现封装，属性私有化</li>
-<li>模块化开发，防止全局污染</li>
-</ol>
-<h1 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h1><p>立即执行函数执行完立刻被销毁，不会占用内存空间。有如下形式<br></p>
-<ol>
-<li>(function() { } ( )  )  //w3c官方文档建议用法</li>
-<li>(function( ) { } ) ( )</li>
-</ol>
-
-          
+          <p>&nbsp;<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/23/闭包知识点/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
