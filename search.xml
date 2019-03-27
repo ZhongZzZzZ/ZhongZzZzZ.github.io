@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[获取伪元素属性]]></title>
+    <url>%2F2019%2F03%2F28%2F%E8%8E%B7%E5%8F%96%E4%BC%AA%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[&nbsp; 获取到伪元素的唯一方法：window.getComputedStyle(ele,null),null可不填，也可填伪元素，如”after”,”before”如例123456789101112131415161718192021&lt;body&gt;&lt;div&gt;&lt;/div&gt;&lt;/body&gt;&lt;style&gt;div&#123; width:100px; height:100px; background:red;&#125;div::after&#123; content:&quot;&quot;; width:20px; height:20px; background:orange;&#125;&lt;style&gt;&lt;script&gt;console.log(window.getComputedStyle(div,&quot;after&quot;).width)&lt;/script&gt;]]></content>
+      <tags>
+        <tag>-伪元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[三列布局]]></title>
+    <url>%2F2019%2F03%2F28%2F%E4%B8%89%E5%88%97%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[&nbsp; 圣杯布局两边固定宽度，中间自适应布局。使用了相对定位，配合left和rigth属性，将三列放在一个大的 div 里面。(包裹在一个容器中时，设置了padding属性使内容显示在中间，所以需要position来设置偏移量) 优点：结构简单。 缺点：中间部分宽度小于左侧时，发生混乱。 123456789101112131415161718192021222324252627282930313233343536&lt;div id=&quot;container&quot;&gt; &lt;div id=&quot;mid&quot;&gt;中间&lt;/div&gt; &lt;div id=&quot;left&quot;&gt;左边&lt;/div&gt; &lt;div id=&quot;right&quot;&gt;右边&lt;/div&gt;&lt;/div&gt;&lt;style&gt; #container&#123; padding:0 200px; height:200px; &#125; #mid&#123; width:100%; height:200px; float:left; background:red; &#125; #left&#123; float:left; position:relative; margin-left:-100%; left:-200px; height:200px; width:200px; background:orange; &#125; #right&#123; float:left; position:relative; margin-left:-200px; right:-200px; height:200px; width:200px; background:orange; &#125;&lt;/style&gt; 双飞翼布局两边固定宽度，中间自适应布局。在mid的div里又插入一个div，通过调整内部div的margin值，实现中间栏自适应，内容写到内部div中。 优点：通用性强。 缺点：dom结构多余，增加渲染生成树计算量。-123456789101112131415161718192021222324252627282930313233&lt;div id=&quot;mid&quot;&gt; &lt;div id=&quot;inside&quot;&gt;中间&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;left&quot;&gt;左边&lt;/div&gt;&lt;div id=&quot;right&quot;&gt;右边&lt;/div&gt;&lt;style&gt;#mid&#123; width:100%; height:200px; background:red; float:left&#125;#inside&#123; margin:0 200px; height:200px; &#125;#left&#123; height:200px; width:200px; float:left; margin-left:-100%; background:orange;&#125;#right&#123; height:200px; width:200px; float:left; margin-left:-200px; background:orange;&#125;&lt;style&gt;]]></content>
+      <tags>
+        <tag>-三列布局</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[域链、闭包、立即执行函数-知识点]]></title>
     <url>%2F2019%2F03%2F23%2F%E9%97%AD%E5%8C%85%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
     <content type="text"><![CDATA[&nbsp; 函数作用域、链 作用域：[[scope]] 属性就是作用域，不能被访问，其中存储了运行期上下午集合。 作用域链：[[scope]]域的集合呈链式链接，称为作用域链 12345678910function a()&#123; function b()&#123; function c()&#123; &#125; c(); &#125; b();&#125;a(); a 定义时作用域链：a.[[scope] –&gt; 0:global objecta 执行时作用域链：a.[[scope] –&gt; 0:activation object 1:global objectb 定义时作用域链：b.[[scope] –&gt; 0:global object 1:global objectb 执行时作用域链：b.[[scope] –&gt; 0:activation object(b的AO) 1:activation object 2:globalobject 闭包形式123456789function a()&#123; function b()&#123; document.write(aaa); &#125; var aaa=123; return b;&#125;var demo = a();demo();//输出结果为123 把b函数return出去，b函数在函数a里面并未执行，并且b在外部保存了a函数的activation object 域，因此可以访问到变量aaa。 注意点当函数内部被保存到外部，即生成闭包，闭包会导致原有的作用域链不释放，造成内存泄漏（如上例，b保存了a的作用域到外部，不释放，占用内存空间，造成内存泄漏） 闭包作用 实现公有变量，如：函数累加器，使开发更加模块化 123456789101112function a()&#123; var count = 0; function demo()&#123; count ++; console.log(count); &#125; return demo;&#125;var counter = a();counter();//1counter();//2counter();//3 可以做缓存 可以实现封装，属性私有化 模块化开发，防止全局污染 立即执行函数立即执行函数执行完立刻被销毁，不会占用内存空间。有如下形式 (function() { } ( ) ) //w3c官方文档建议用法 (function( ) { } ) ( )]]></content>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="-三列布局,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Better me">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhong">
-<meta property="og:url" content="http://yoursite.com/categories/Hexo教程/index.html">
+<meta name="description" content="&amp;nbsp;">
+<meta name="keywords" content="-三列布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三列布局">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/三列布局/index.html">
 <meta property="og:site_name" content="Zhong">
-<meta property="og:description" content="Better me">
+<meta property="og:description" content="&amp;nbsp;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-27T18:57:31.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhong">
-<meta name="twitter:description" content="Better me">
+<meta name="twitter:title" content="三列布局">
+<meta name="twitter:description" content="&amp;nbsp;">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Hexo教程/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/28/三列布局/">
 
 
 
 
 
-  <title>分类: Hexo教程 | Zhong</title>
+  <title>三列布局 | Zhong</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,53 +271,173 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo教程<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/三列布局/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhong">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/21/My-first-Blog/" itemprop="url">
-              
-                <span itemprop="name">HEXO爬坑</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">三列布局</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T01:12:13+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T01:56:47+08:00">
+                2019-03-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&nbsp;<br><a id="more"></a></p>
+<h1 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h1><p>两边固定宽度，中间自适应布局。使用了相对定位，配合left和rigth属性，将三列放在一个大的 div 里面。(包裹在一个容器中时，设置了padding属性使内容显示在中间，所以需要position来设置偏移量)</p>
+<ul>
+<li>优点：结构简单。</li>
+<li>缺点：中间部分宽度小于左侧时，发生混乱。</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div id=&quot;mid&quot;&gt;中间&lt;/div&gt;</span><br><span class="line">  &lt;div id=&quot;left&quot;&gt;左边&lt;/div&gt;</span><br><span class="line">  &lt;div id=&quot;right&quot;&gt;右边&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line"> #container&#123;</span><br><span class="line">     padding:0 200px;</span><br><span class="line">     height:200px;</span><br><span class="line"> &#125;</span><br><span class="line"> #mid&#123;</span><br><span class="line">     width:100%;</span><br><span class="line">     height:200px;</span><br><span class="line">     float:left;</span><br><span class="line">     background:red;</span><br><span class="line"> &#125;</span><br><span class="line"> #left&#123;</span><br><span class="line">     float:left;</span><br><span class="line">     position:relative;</span><br><span class="line">     margin-left:-100%;</span><br><span class="line">     left:-200px;</span><br><span class="line">     height:200px;</span><br><span class="line">     width:200px;</span><br><span class="line">     background:orange;</span><br><span class="line"> &#125;</span><br><span class="line"> #right&#123;</span><br><span class="line">     float:left;</span><br><span class="line">     position:relative;</span><br><span class="line">     margin-left:-200px;</span><br><span class="line">     right:-200px;</span><br><span class="line">     height:200px;</span><br><span class="line">     width:200px;</span><br><span class="line">     background:orange;</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h1><p>两边固定宽度，中间自适应布局。在mid的div里又插入一个div，通过调整内部div的margin值，实现中间栏自适应，内容写到内部div中。</p>
+<ul>
+<li>优点：通用性强。</li>
+<li>缺点：dom结构多余，增加渲染生成树计算量。<br>-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;mid&quot;&gt;</span><br><span class="line">   &lt;div id=&quot;inside&quot;&gt;中间&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;left&quot;&gt;左边&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;right&quot;&gt;右边&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#mid&#123;</span><br><span class="line">    width:100%;</span><br><span class="line">    height:200px;</span><br><span class="line">    background:red;</span><br><span class="line">    float:left</span><br><span class="line">&#125;</span><br><span class="line">#inside&#123;</span><br><span class="line">    margin:0 200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">#left&#123;</span><br><span class="line">    height:200px;</span><br><span class="line">    width:200px;</span><br><span class="line">    float:left;</span><br><span class="line">    margin-left:-100%;</span><br><span class="line">     background:orange;</span><br><span class="line">&#125;</span><br><span class="line">#right&#123;</span><br><span class="line">    height:200px;</span><br><span class="line">    width:200px;</span><br><span class="line">    float:left;</span><br><span class="line">    margin-left:-200px;</span><br><span class="line">    background:orange;</span><br><span class="line">&#125;</span><br><span class="line">&lt;style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+      
+      <div>
+
+<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束---感谢您的阅读-------------</div>
+
+</div>
+
+      
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/三列布局/" rel="tag"><i class="fa fa-tag"></i> -三列布局</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/23/闭包知识点/" rel="next" title="域链、闭包、立即执行函数-知识点">
+                <i class="fa fa-chevron-left"></i> 域链、闭包、立即执行函数-知识点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/28/获取伪元素属性/" rel="prev" title="获取伪元素属性">
+                获取伪元素属性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -323,6 +445,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -343,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -422,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#圣杯布局"><span class="nav-number">1.</span> <span class="nav-text">圣杯布局</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#双飞翼布局"><span class="nav-number">2.</span> <span class="nav-text">双飞翼布局</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -570,6 +721,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
