@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JS加载时间线]]></title>
+    <url>%2F2019%2F03%2F29%2FJS%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF%2F</url>
+    <content type="text"><![CDATA[&nbsp; JS加载时间线 创建document对象，开始解析web页面。解析HTML元素和他们的文本内容后添加Element对象和Text结点到文档中，这阶段document.redayState = “loading”。 遇到link外部CSS，创建线程加载， 并继续解析文档 遇到script外部JS，没有设置async、defer、浏览器加载并阻塞，等待js加载完成执行该脚本，然后继续解析文档。 遇到script外部JS，设置有async、defer，浏览器创建线程加载，并继续解析文档。对于async脚本，脚本加载完立即执行（异步禁止使用document.write（），这样会清空之前所有的文档流，加载document.write（）的文档） 遇到img结构，先正常解析dom结构，然后浏览器异步加载src，并继续解析文档。 当文档解析完成后，document.readyState = ‘interactive’。 文档解析完成后，所有设置有defer的脚本会按顺序执行（同样禁止document.write（））。 document对象触发DOMContentLoaded事件，标志着程序执行从同步脚本执行阶段转化为事件驱动阶段。 当所有async脚本加载完并执行后，img等加载完后，document.readyState = ‘complete’。 从此，以异步响应方式处理用户输入，网络事件等。]]></content>
+      <tags>
+        <tag>-JS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[获取伪元素属性]]></title>
     <url>%2F2019%2F03%2F28%2F%E8%8E%B7%E5%8F%96%E4%BC%AA%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%2F</url>
     <content type="text"><![CDATA[&nbsp; 获取到伪元素的唯一方法：window.getComputedStyle(ele,null),null可不填，也可填伪元素，如”after”,”before”如例12345678910111213141516171819202122&lt;body&gt;&lt;div&gt;&lt;/div&gt;&lt;/body&gt;&lt;style&gt;div&#123; width:100px; height:100px; background:red;&#125;div::after&#123; content:&quot;&quot;; width:20px; height:20px; background:orange;&#125;&lt;style&gt;&lt;script&gt;var div = document.getElementsByTagName(&quot;div&quot;)[0];console.log(window.getComputedStyle(div,&quot;after&quot;).width);&lt;/script&gt;]]></content>
