@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[获取伪元素属性]]></title>
     <url>%2F2019%2F03%2F28%2F%E8%8E%B7%E5%8F%96%E4%BC%AA%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%2F</url>
-    <content type="text"><![CDATA[&nbsp; 获取到伪元素的唯一方法：window.getComputedStyle(ele,null),null可不填，也可填伪元素，如”after”,”before”如例123456789101112131415161718192021&lt;body&gt;&lt;div&gt;&lt;/div&gt;&lt;/body&gt;&lt;style&gt;div&#123; width:100px; height:100px; background:red;&#125;div::after&#123; content:&quot;&quot;; width:20px; height:20px; background:orange;&#125;&lt;style&gt;&lt;script&gt;console.log(window.getComputedStyle(div,&quot;after&quot;).width)&lt;/script&gt;]]></content>
+    <content type="text"><![CDATA[&nbsp; 获取到伪元素的唯一方法：window.getComputedStyle(ele,null),null可不填，也可填伪元素，如”after”,”before”如例12345678910111213141516171819202122&lt;body&gt;&lt;div&gt;&lt;/div&gt;&lt;/body&gt;&lt;style&gt;div&#123; width:100px; height:100px; background:red;&#125;div::after&#123; content:&quot;&quot;; width:20px; height:20px; background:orange;&#125;&lt;style&gt;&lt;script&gt;var div = document.getElementsByTagName(&quot;div&quot;)[0];console.log(window.getComputedStyle(div,&quot;after&quot;).width);&lt;/script&gt;]]></content>
       <tags>
         <tag>-伪元素</tag>
       </tags>
